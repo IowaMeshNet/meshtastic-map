@@ -1,18 +1,27 @@
 <html>
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3FQN22FYC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N3FQN22FYC');
+    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Meshtastic Map</title>
-    <meta name="title" content="Meshtastic Map">
-    <meta name="description" content="An interactive map of all Meshtastic nodes.">
+    <title>IowaMesh Meshtastic Map</title>
+    <meta name="title" content="IowaMesh Meshtastic Map">
+    <meta name="description" content="An interactive map of all IowaMesh Meshtastic nodes.">
     <link rel="icon" type="image/png" href="/icon.png"/>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://meshtastic.liamcottle.net">
-    <meta property="og:title" content="Meshtastic Map">
-    <meta property="og:description" content="An interactive map of all Meshtastic nodes.">
+    <meta property="og:url" content="https://meshmap.iowamesh.net">
+    <meta property="og:title" content="IowaMesh Meshtastic Map">
+    <meta property="og:description" content="An interactive map of all IowaMesh Meshtastic nodes.">
 
     <!-- tailwind css -->
     <script src="assets/js/tailwindcss/tailwind-v3.4.3-forms-v0.5.7.js"></script>
@@ -1683,7 +1692,7 @@
     }
 
     function getConfigTemperatureFormat() {
-        return localStorage.getItem("config_temperature_format") || "celsius";
+        return localStorage.getItem("config_temperature_format") || "fahrenheit";
     }
 
     function setConfigTemperatureFormat(format) {
