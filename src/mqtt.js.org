@@ -707,32 +707,9 @@ function convertHexIdToNumericId(hexId) {
 
 // subscribe to everything when connected
 client.on("connect", () => {
-    console.log(`Connected to MQTT broker at ${mqttBrokerUrl}`);
     for(const mqttTopic of mqttTopics){
-        client.subscribe(mqttTopic, (err) => {
-            if(err){
-                console.error(`Failed to subscribe to topic ${mqttTopic}:`, err.message);
-            } else {
-                console.log(`Subscribed to topic: ${mqttTopic}`);
-            }
-        });
+        client.subscribe(mqttTopic);
     }
-});
-
-client.on("error", (err) => {
-    console.error("MQTT connection error:", err.message);
-});
-
-client.on("close", () => {
-    console.log("MQTT connection closed");
-});
-
-client.on("reconnect", () => {
-    console.log("Attempting to reconnect to MQTT broker...");
-});
-
-client.on("offline", () => {
-    console.log("MQTT client is offline");
 });
 
 // handle message received
