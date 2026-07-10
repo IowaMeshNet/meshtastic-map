@@ -10,7 +10,9 @@ RUN npm ci
 # Copy the rest of your source
 COPY . .
 
+# Ensure entrypoint scripts are executable (git doesn't reliably preserve +x)
+RUN chmod +x docker/map.sh docker/mqtt.sh
+
 RUN apk add --no-cache openssl
 
-
-EXPOSE 8080
+EXPOSE 41080
