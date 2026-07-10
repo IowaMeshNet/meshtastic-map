@@ -3,9 +3,6 @@ services:
   # listens to mqtt packets and saves to database
   meshtastic-mqtt:
     container_name: meshtastic-mqtt
-    depends_on:
-      database:
-        condition: service_healthy
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -17,9 +14,6 @@ services:
   # runs the web map ui
   meshtastic-map:
     container_name: meshtastic-map
-    depends_on:
-      database:
-        condition: service_healthy
     build:
       context: .
       dockerfile: ./Dockerfile
