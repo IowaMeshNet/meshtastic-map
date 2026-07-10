@@ -1,14 +1,10 @@
 #!/bin/sh
 
-#echo "Running migrations"
-#npx prisma migrate dev
-
-#echo "Starting mqtt listener"
-#exec node src/mqtt.js ${MQTT_OPTS}
-#!/bin/sh
-
 echo "Running migrations..."
 npx prisma migrate deploy
+
+echo "Generating Prisma client..."
+npx prisma generate
 
 echo "Starting MQTT listener..."
 
@@ -36,4 +32,4 @@ exec node src/mqtt.js \
   --purge-traceroutes-after-seconds 604800 \
   --purge-waypoints-after-seconds 604800 \
   --drop-packets-not-ok-to-mqtt \
-  --old-firmware-position-precision 16
+  --old-firmware-position-precision 16s
