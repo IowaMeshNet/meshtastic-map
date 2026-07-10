@@ -19,7 +19,7 @@ services:
       dockerfile: ./Dockerfile
     command: /app/docker/map.sh
     ports:
-      - 41080:41080/tcp
+      - 41080:8080/tcp
     environment:
       DATABASE_URL: "${DATABASE_URL}"
       MAP_OPTS: "" # add any custom index.js options here
