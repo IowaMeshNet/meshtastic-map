@@ -9,7 +9,7 @@ npx prisma generate
 echo "Starting MQTT listener..."
 
 exec node src/mqtt.js \
-  --mqtt-broker-url mqtt://mqtt.nonullsessions.com:8882 \
+  --mqtt-broker-url mqtt://172.31.18.51:8882 \
   --mqtt-username iromesh \
   --mqtt-password '2Gab9eAz' \
   --mqtt-client-id meshtmap-iromesh \
