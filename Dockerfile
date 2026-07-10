@@ -15,4 +15,4 @@ RUN chmod +x docker/map.sh docker/mqtt.sh
 
 RUN apk add --no-cache openssl
 
-EXPOSE 41080
+EXPOSE 8080
