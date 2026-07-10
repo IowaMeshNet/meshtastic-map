@@ -12,7 +12,7 @@ exec node src/mqtt.js \
   --mqtt-broker-url mqtt://172.31.18.51:8882 \
   --mqtt-username iromesh \
   --mqtt-password '2Gab9eAz' \
-  --mqtt-client-id meshtmap-iromesh \
+  --mqtt-client-id "meshtmap-iromesh-$(hostname)" \
   --mqtt-topic 'iromesh/#' \
   --collect-service-envelopes \
   --collect-text-messages \
