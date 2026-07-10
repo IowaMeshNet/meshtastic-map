@@ -199,10 +199,7 @@
 
                 <!-- app info -->
                 <div v-if="!isShowingMobileSearch" class="my-auto leading-tight">
-                    <div class="font-bold">Meshtastic Map</div>
-                    <div class="text-sm">
-                        Created by <a class="link" target="_blank" href="https://liamcottle.com">Liam Cottle</a>
-                    </div>
+                    <div class="font-bold"><a href="https://www.iowamesh.net" class="font-bold">Meshtastic Map</a></div>
                 </div>
 
                 <!-- search bar -->
@@ -442,14 +439,13 @@
                                         <div class="bg-gray-100 rounded p-2 border border-gray-200">
                                             <div class="font-semibold">What MQTT server should I use?</div>
                                             <ul class="list-disc list-inside">
-                                                <li>Address: mqtt.meshtastic.liamcottle.net</li>
-                                                <li>Username: uplink</li>
-                                                <li>Password: uplink</li>
+                                                <li>Address: mqtt.iowamesh.net (Might need to add 8882 after the .net)</li>
+                                                <li>Username: (See Discord for Details)</li>
+                                                <li>Password: (See Discord for Details)</li>
                                                 <li>Encryption Enabled: Yes</li>
-                                                <li>JSON Output: No</li>
-                                                <li>TLS Enabled: No</li>
+                                                <li>JSON Output: Yes (If your device supports it)</li>
+                                                <li>TLS Enabled: yes</li>                                  
                                             </ul>
-                                            <div>Please note, nodes can only uplink to this server. Downlink is disabled.</div>
                                             <div>We suggest running dedicated nodes for uplinking to the map.</div>
                                         </div>
                                         <div class="bg-gray-100 rounded p-2 border border-gray-200">
@@ -458,7 +454,7 @@
                                             <div>Disable position reporting in your node to prevent it coming back.</div>
                                             <div>Use custom encryption keys so the public can't see your position data.</div>
                                             <div>If your node has v2.5 firmware or newer, we ignore packets if "OK to MQTT" is disabled.</div>
-                                            <div>To have your node removed now, please <a target="_blank" href="https://liamcottle.com/contact" class="link">contact me</a>.</div>
+                                            <div>To have your node removed now, please <a target="_blank" href="https://discord.com/channels/@me/juttingc" class="link">contact me</a>.</div>
                                         </div>
                                         <div class="bg-gray-100 rounded p-2 border border-gray-200">
                                             <div class="font-semibold">How do I see neighbours a node heard?</div>
