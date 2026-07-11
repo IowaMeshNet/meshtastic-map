@@ -238,7 +238,6 @@ model TextMessage {
   @@index(from)
   @@index(packet_id)
   @@index(gateway_id)
-  @@unique([packet_id, gateway_id], name: "packet_id_gateway_id")
   @@map("text_messages")
 }
 

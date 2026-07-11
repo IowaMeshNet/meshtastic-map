@@ -850,8 +850,15 @@ client.on("message", async (topic, message) => {
             }
 
             try {
-                await prisma.textMessage.create({
-                    data: {
+                await prisma.textMessage.upsert({
+                    where: {
+                        packet_id_gateway_id: {
+                            packet_id: envelope.packet.id,
+                            gateway_id: envelope.gatewayId ? convertHexIdToNumericId(envelope.gatewayId) : null,
+                        },
+                    },
+                    update: {}, // already recorded, nothing to update
+                    create: {
                         to: envelope.packet.to,
                         from: envelope.packet.from,
                         channel: envelope.packet.channel,
